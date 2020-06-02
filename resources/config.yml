@@ -1,0 +1,34 @@
+---
+# If a random number between min - max is same as the value the actions will be ran.
+enable-luck: false
+min: 1
+max: 5
+value: 5
+
+# Useless {killer} the killer name, {player} the player name.
+enable-message: false
+killer-message: "Wow! {killer} you killed {player}"
+player-message: "Bad! {killer} killed you! {player}"
+
+# If true it'll give players money when they kill
+economyapi-support: false
+# This amount won't be given if you have the enable-random enabled.
+money: 1000
+# If true it'll give the player random amount between min-money - max-money.
+enable-random: false
+min-money: 100
+max-money: 1000
+
+# If false it'll run all the commands on the list.
+random-command: true
+# Commands list, {player} is the player name. Leave it empty if you don't want to dispatch commands
+commands:
+  - "say hi {player}"
+
+# If false it'll run all the items on the list.
+random-items: true
+# The format is "ID:META:AMOUNT:NAME" Leave it empty if you don't want to give players items
+items:
+  - "1:0:1"
+  - "2:0:1:item name"
+...

@@ -1,0 +1,9 @@
+---
+name: KillRewards
+main: Dim9999\KillRewards\Main
+version: 1.0.0
+author: Dim9999
+website: github.com/dim9999
+api: 3.0.0
+description: The most customizable kill reward plugin for PocketMine-MP
+...
