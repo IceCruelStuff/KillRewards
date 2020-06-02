@@ -24,6 +24,9 @@ class Main extends PluginBase implements Listener
     private function rewardItems(Player $player): void
     {
         $items = $this->getConfig()->get("items");
+        if(count($items) === 0){
+            return;
+        }
         if (!$this->getConfig()->get("random-items")) {
             foreach ($this->getConfig()->get("items") as $item) {
                 $item = $items[$item];
@@ -67,6 +70,9 @@ class Main extends PluginBase implements Listener
     private function rewardCommands(Player $player): void
     {
         $commands = $this->getConfig()->get("commands");
+        if(count($commands) === 0){
+            return;
+        }
         if (!$this->getConfig()->get("random-command")) {
             foreach ($this->getConfig()->get("commands") as $command) {
                 $this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", '"' . $player->getName() . '"', $commands[$command]));
