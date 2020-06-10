@@ -74,7 +74,7 @@ class Main extends PluginBase implements Listener
         }
         if (!$this->getConfig()->get("random-command")) {
             foreach ($this->getConfig()->get("commands") as $command) {
-                $this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", '"' . $player->getName() . '"', $commands[$command]));
+                $this->getServer()->dispatchCommand(new ConsoleCommandSender(), str_replace("{player}", '"' . $player->getName() . '"', $command));
             }
         } else {
             $command = array_rand($this->getConfig()->get("commands"), 1);
