@@ -6,4 +6,5 @@ author: Dim9999
 website: github.com/dim9999
 api: 3.0.0
 description: The most customizable kill reward plugin for PocketMine-MP
+softdepend: [EconomyAPI]
 ...
