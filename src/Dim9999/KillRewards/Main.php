@@ -28,7 +28,7 @@ class Main extends PluginBase implements Listener
         }
         if (!$this->getConfig()->get("random-items")) {
             foreach ($this->getConfig()->get("items") as $item) {
-                $item = $items[$item];
+                $item = $item;
                 $data = explode(":", $item);
                 $item = Item::get((int)$data[0], (int)$data[1], (int)$data[2]);
                 if (isset($data[3])) {
