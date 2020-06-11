@@ -23,7 +23,7 @@ class Main extends PluginBase implements Listener
     private function rewardItems(Player $player): void
     {
         $items = $this->getConfig()->get("items");
-        if(count($items) === 0){
+        if(count($items) === 0 or $items === ""){
             return;
         }
         if (!$this->getConfig()->get("random-items")) {
@@ -69,7 +69,7 @@ class Main extends PluginBase implements Listener
     private function rewardCommands(Player $player): void
     {
         $commands = $this->getConfig()->get("commands");
-        if(count($commands) === 0){
+        if(count($commands) === 0 or $commands === ""){
             return;
         }
         if (!$this->getConfig()->get("random-command")) {
